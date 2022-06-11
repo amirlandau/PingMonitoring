@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Update{% endblock %}
+
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/edit.css')}}">
+{% endblock %}
+
+{% block content %}
+{{ super() }}
+<h1>Update Server</h1>
+
+<form action="/servers/edit/{{edited_server.id}}" method="POST" id="addServer">
+    <input type="text" placeholder="Server Name" value="{{edited_server.name}}" name="name" required autocomplete="off">
+    <input type="text" placeholder="Server IP" value={{edited_server.ip}} name="ip">
+    <input type="submit" value="Update Server">
+</form>
+{% endblock %}

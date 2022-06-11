@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="he-IL">
+
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/home.css')}}">
+    <title>{% block title %}{% endblock %}</title>
+    {% endblock %}
+</head>
+
+<body id="body">
+    <div id="content">
+        {% block content %}
+        <div class="btn-box">
+            <button class="btn" onclick="location.href= '/'" type="button"><i class="fa fa-home"></i></button>
+            <button class="btn" onclick="history.back()"><i style="font-size:38px"
+                    class="fa fa-arrow-left"></i></button>
+        </div>
+        {% endblock %}
+    </div>
+</body>
+</html>

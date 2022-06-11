@@ -1,0 +1,13 @@
+#addServer input {
+	margin-top: 4px;
+}
+
+h1 {
+	font-family: sans-serif, "Poppins";
+	margin-bottom: 12px;
+}
+
+input[type=submit] {
+	background-color: #009879;
+	color: white;
+}

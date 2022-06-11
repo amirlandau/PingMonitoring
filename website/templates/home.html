@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block head %}
+{{ super() }}
+<link rel="icon" type="image/png" href="eco-green-leaf-icon-152-170142.png">
+{% endblock %}
+
+{% block content %}
+{{ super() }}
+<section>
+    <br><br>
+    <div class="box-container">
+        <div class="single-box">
+            <div class="img-area"></div>
+            <div class="img-text">
+                <a href="/" class="header-text"><strong>דוח יומי</strong></a>
+                <p><br><br></p>
+            </div>
+        </div>
+        <div class="single-box">
+            <div class="img-area"></div>
+            <div class="img-text">
+                <a href="/servers" class="header-text"><strong>פינגר</strong></a>
+                <p><br><br></p>
+            </div>
+        </div>
+        <div class="single-box">
+            <div class="img-area"></div>
+            <div class="img-text">
+                <a href="#" class="header-text"><strong>שו"ב</strong></a>
+                <p><br><br></p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Update{% endblock %}
+
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+    {{ super() }}
+    <h1>Update Server</h1>
+
+    <form action="/update/{{server_to_update.id}}" method="POST">
+        <input type="text" placeholder="Rack" value={{server_to_update.rack}} name="rack">
+        <input type="text" placeholder="Server Name" value={{server_to_update.server_name}} name="server_name">
+        <input type="text" placeholder="Server IP" value={{server_to_update.server_ip}} name="server_ip">
+        <input type="text" placeholder="MAC Address" value={{server_to_update.mac_address}} name="mac_address">
+        <input type="text" placeholder="Serial Number" value={{server_to_update.serial_number}} name="serial_number">
+        <input type="submit" value="Update Server">
+    </form>
+{% endblock %}

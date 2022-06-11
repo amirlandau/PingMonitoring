@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/login.css')}}">
+{% endblock %}
+
+{% block content %}
+{{ super() }}
+
+<div class="center">
+  <h1>התחברות</h1>
+  <form action="/login" method="POST" dir="rtl" name="myForm">
+    <div class="txt_field">
+      <input type="text" name="username" required autocomplete="off">
+      <label for="username">שם משתמש</label>
+    </div>
+    {% with messages = get_flashed_messages(category_filter=["incorrect_username"]) %}
+    {% if messages %}
+    {% for message in messages %}
+      <small>{{ message }}</small>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <div class="space"></div>
+    <div class="txt_field">
+      <input type="password" name="password" required>
+      <label id=sisma for="username">סיסמה</label>
+    </div>
+    {% with messages = get_flashed_messages(category_filter=["incorrect_password"]) %}
+    {% if messages %}
+    {% for message in messages %}
+      <small>{{ message }}</small>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <div class="space"></div>
+    <br>
+    <input type="submit" value="התחבר">
+    <div class="space"></div>
+    </div>
+  </form>
+</div>
+
+{% endblock %}
