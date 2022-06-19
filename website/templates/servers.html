@@ -25,7 +25,6 @@
         <th>Name</th>
         <th>IP</th>
         <th>Status</th>
-        <th>Status Date</th>
         <th>Action</th>
       </tr>
   </thead>
@@ -35,11 +34,10 @@
         <td data-label="Name">{{server.name}} </td>
         <td data-label="IP">{{server.ip}} </td>
         {% if server.status == "1"%}
-        <td data-label="Status"><span style="color: rgb(30, 177, 30);">Online</span></td>
+        <td data-label="Status"><div style="color: rgb(30, 177, 30);" class="tooltip">Online<span class="tooltiptext">Last Changed: {{server.status_date.strftime("%d/%m/%y %H:%M")}}</span></div></td>
         {% else %}
-        <td data-label="Status"><span style="color: red;">Offline</span></td>
+        <td data-label="Status"><div style="color: red;" class="tooltip">Online<span class="tooltiptext">Last Changed: {{server.status_date.strftime("%d/%m/%y %H:%M")}}</span></div></td>
         {% endif %}
-        <td data-label="Status Date">{{server.status_date.strftime("%Y-%m-%d %H:%M")}}</td>
         <td class="action-images"><a href="servers/edit/{{server.id}}"><img class="img" src="{{url_for('static', filename='images/edit.png')}}" /></a><a href="servers/delete/{{server.id}}"><img
             class="img" src="{{url_for('static', filename='images/remove.png')}}" /></a><a href="servers/remote/{{server.id}}"><img class="img" src="{{url_for('static', filename='images/remote.png')}}"/></a>
         </td>

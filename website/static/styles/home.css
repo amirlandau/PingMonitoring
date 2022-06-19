@@ -37,12 +37,12 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	width: 300px;
-	height: 350px !important;
+	width: 400px;
+	height: 450px !important;
 	background-color: #fff;
 	text-align: center;
-	margin: 20px;
-	padding: 20px;
+	margin: 30px;
+	padding: 10px;
 	border-radius: 0.8rem;
 	overflow: hidden;
 	box-shadow: 0 2rem 10rem 0.8rem rgba(0, 0, 0, 0.06);
@@ -54,12 +54,12 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 80px;
-	height: 80px;
+	width: 100px;
+	height: 100px;
 	border: 6px solid #ddd;
 	border-radius: 50%;
 	margin-bottom: 10px;
-	padding: 20px;
+	padding: 25px;
 	background-size: cover;
 	background-position: center center;
 	-webkit-background-size: cover;
@@ -79,7 +79,7 @@ body {
 }
 
 .header-text {
-	font-size: 24px;
+	font-size: 30px;
 	font-weight: 500;
 	line-height: 48px;
 	text-decoration: none;
