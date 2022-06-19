@@ -36,7 +36,7 @@
         {% if server.status == "1"%}
         <td data-label="Status"><div style="color: rgb(30, 177, 30);" class="tooltip">Online<span class="tooltiptext">Last Changed: {{server.status_date.strftime("%d/%m/%y %H:%M")}}</span></div></td>
         {% else %}
-        <td data-label="Status"><div style="color: red;" class="tooltip">Online<span class="tooltiptext">Last Changed: {{server.status_date.strftime("%d/%m/%y %H:%M")}}</span></div></td>
+        <td data-label="Status"><div style="color: red;" class="tooltip">Offline<span class="tooltiptext">Last Changed: {{server.status_date.strftime("%d/%m/%y %H:%M")}}</span></div></td>
         {% endif %}
         <td class="action-images"><a href="servers/edit/{{server.id}}"><img class="img" src="{{url_for('static', filename='images/edit.png')}}" /></a><a href="servers/delete/{{server.id}}"><img
             class="img" src="{{url_for('static', filename='images/remove.png')}}" /></a><a href="servers/remote/{{server.id}}"><img class="img" src="{{url_for('static', filename='images/remote.png')}}"/></a>
