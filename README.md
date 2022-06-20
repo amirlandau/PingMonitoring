@@ -2,7 +2,7 @@
 PingMonitoring is a Flask project that helps you to monitor the network availability of the servers in your data center using multi-threaded ping, with an option to connect remotely.
 
 <h2>Demo</h2>
-Video demo: https://vimeo.com/717255230.
+Video demo: https://vimeo.com/722235043.
 
 <h2>Setup & Installtion</h2>
 
