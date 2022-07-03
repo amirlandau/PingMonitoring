@@ -64,9 +64,9 @@ def servers():
         except:
             return "There was an error adding your server"
 
-    else:
-        servers = Servers.query.order_by(Servers.id)
-        return render_template('servers.html', servers=servers)
+
+    servers = Servers.query.order_by(Servers.id)
+    return render_template('servers.html', servers=servers)
 
 
 # Edit Server parameters.
