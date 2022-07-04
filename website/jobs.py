@@ -22,7 +22,8 @@ def update_ip_status():
             check_status[future] = ip,  future.result() = status"""
             ip_and_status_dict = {check_status[future]: future.result(
             ) for future in concurrent.futures.as_completed(check_status)}
-
+            print(ip_and_status_dict)
+            
         # Updating IP server status.
         for ip, status in ip_and_status_dict.items():
             server = Servers.query.filter(Servers.ip == ip).first()
