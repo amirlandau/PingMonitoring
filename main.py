@@ -1,3 +1,4 @@
+from urllib.parse import uses_relative
 from website import create_app
 from apscheduler.schedulers.background import BackgroundScheduler
 from website.jobs import update_ip_status
@@ -12,6 +13,6 @@ if __name__ == '__main__':
     scheduler.add_job(func=update_ip_status, trigger="interval", seconds=15)
     scheduler.start()
 
-    app.run(debug=True)
+    app.run(debug=True, use_reloader=False)
 
 
