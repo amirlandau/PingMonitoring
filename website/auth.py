@@ -87,8 +87,7 @@ def edit(server_id):
         except:
             return "There was a problem to update the server"
 
-    else:
-        return render_template("edit.html", edited_server=edited_server)
+    return render_template("edit.html", edited_server=edited_server)
 
 
 # Delete Server from the DB table.

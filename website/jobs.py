@@ -30,6 +30,7 @@ def update_ip_status():
             server.status = status
             updated_status = server.status
 
+
             # Updating date only when IP server status changes.
             if previous_status == "0" and updated_status == True or previous_status == "1" and updated_status == False:
                 server.status_date = datetime.now()
