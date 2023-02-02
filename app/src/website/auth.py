@@ -2,14 +2,8 @@ from flask import Blueprint, render_template, request, flash, redirect, url_for,
 from .models import Servers
 from . import db
 from datetime import datetime
-import time
 from .functions import fast_ping
 from functools import wraps
-import subprocess
-import pythoncom
-import win32com.client
-
-
 auth = Blueprint('auth', __name__)
 
 
@@ -103,21 +97,3 @@ def delete(server_id):
 
     except:
         return "There was a problem to delete the server"
-
-
-# Connect to Windows Server via Remote Desktop Connection.
-@auth.route('/servers/remote/<int:server_id>')
-@login_required
-def remote(server_id):
-    remote_server = Servers.query.get_or_404(server_id)
-    
-    # Set Remote Desktop Connection window foreground
-    pythoncom.CoInitialize()
-    shell = win32com.client.Dispatch("WScript.Shell")
-    shell.SendKeys('%')
-
-    # Calling Remote Desktop Connection and tries to remote access the server using its IP address
-    subprocess.call(f'mstsc /v:{remote_server.ip}')
-
-    return redirect("/servers")
-
