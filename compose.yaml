@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  web-app:
+    build: ./app
+    container_name: pingmonitor-web
+    image: pingmonitor-web
+    command: "python main.py"
+    restart: always
+    ports: 
+    - 80:5000
+    volumes:
+      - ./app/src:/app

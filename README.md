@@ -18,47 +18,10 @@ First, you need to clone this repository:
 $ git clone https://github.com/amirlandau/PingMonitoring.git
 ```
 
-Move into the parent website directory:
-
+Go to PingMonitoring directory and run Docker with
 ```
-$ cd PingMonitoring
-$ cd website
-```
-
-Create a new virtual environment. We're going to call ours venv (You should too!):
-
-```
-$ python -m venv venv 
-```
-
-Activate it:
-
-```
-$ . venv/Scripts/activate  # on Windows, use "venv\Scripts\activate" instead
-```
-
-Upgrade pip:
-
-```
-$ pip install --upgrade pip  # on Windows, use "python -m pip install --upgrade pip"
-```
-
-Now go back one directory:
-
-```
-$ cd ..
-```
-
-Install the Python dependencies:
-
-```
-$ pip install -r requirements.txt
-```
-
-Running The App: 
-```
-$ python main.py
+docker compose up -d
 ```
 
 Viewing The App:
-Go to `http://127.0.0.1:5000`
+Go to `http://localhost`
