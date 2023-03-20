@@ -11,3 +11,4 @@ services:
     - 80:5000
     volumes:
       - ./app/src:/app
+      
